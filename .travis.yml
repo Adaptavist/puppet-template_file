@@ -1,0 +1,14 @@
+rvm: 2.0.0
+env:
+- PUPPET_VERSION=4.8.1
+notifications:
+  email: false
+  hipchat:
+    rooms:
+      secure: mYubglK2fSRRJoLmMBUVoycu5twGn9WFcmd6/Wwejz6yFcoZYiNNp0ubPXdySAigroaqIdBiaGm9XqYnsP7AvDyHGjvejkzvz2ZZH6bHeN7bXICYPB2/UPUyVTLLCIOo/DG353pF1YglsYfy6z8msKzkoo2Dpe7XScgjkSw3Lp0dILs/BQk9fBfwBX0+KcSVzoqkoDN9GRvnae9dlmWiBtbs6b7GiOA0z1Hu3xNQLC1653s81O7gDwEtc4JHxAftimiQuGi4/Biatc906unCo1POA31HhftRmGsowU6PoeW0zw3m9OFnefXiiUNfIEBZ/bUhuG9yAthw2vvKdQKfTcAOIXiY+mNOSJutGk6+EL+rHNgJQcInu3uTHs6jnkfgzRcGTQKYsqbHsGBVue5QI4KboeGCTn8bj+pLhmiBux1ALTLhfgkmmIBaz41rtwiLFsrwcEGx0I+642L9ZhQQ/8XwX4I069Ai0KGcQqgxTjM6PffE/Vi1y5ox9TNZ9tLT3lwHpW1t8hgs/bZJSW6OOG++KbrqS+TKXE6eIHpEetg6f9NLtbAL+BsWj+CcyljWFF9SdSYUI0mYB28rUEfXc1OGirauVfjLs78gw02ThTs8OCruLyOkj37EhQ/g04W1nPoFJ2o96sPS7WGpHDREaNqZ9SHdxQKujFY2AkoRhOs=
+    template:
+    - 'Puppet Module - %{repository} #%{build_number} (%{build_url}) by %{author}:
+      %{message}'
+branches:
+  only:
+  - master
