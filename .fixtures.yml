@@ -2,9 +2,14 @@ fixtures:
   repositories:
     stdlib:
       repo: "https://github.com/Adaptavist/puppet-stdlib"
+<<<<<<< HEAD
     libreswan:
       repo: "https://github.com/Adaptavist/puppet-libreswan"
     concat:
       repo: "https://github.com/Adaptavist/puppet-concat"
   symlinks:
     libreswan_config: "#{source_dir}"
+=======
+  symlinks:
+    template_file: "#{source_dir}"
+>>>>>>> 398fac77cc074d98b091c1fa2e81156c59934d7e
