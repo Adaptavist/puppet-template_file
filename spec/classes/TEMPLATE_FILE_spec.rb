@@ -2,13 +2,17 @@ require 'spec_helper'
  
 describe 'template_file', :type => 'class' do
 
-file_name = '/tmp/file'
-template_location = '/tmp/file.sh.erb'
+file_name = '/tmp/file.sh'
+template_location = "template_file/test.erb"
 file_owner = 'root'
 file_group = 'root'
 file_mode  = '0744'
+test_fact_value = 'TEST123456'
 
- context "Should create a file from a specific template" do
+  context "Should create a file from a specific template" do
+    let(:facts) {
+      { :test_fact => test_fact_value }
+    }
     let(:params) {
       { :files => 
         { file_name => 
@@ -26,6 +30,8 @@ file_mode  = '0744'
       	'group' => file_group,
         'mode' => file_mode,
       )
+      file_content = catalogue().resource('file', "#{file_name}").send(:parameters)[:content]
+      expect(file_content).to eq("Value = #{test_fact_value}")
     end
   end
 end
