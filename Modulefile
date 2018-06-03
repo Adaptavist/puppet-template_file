@@ -1,5 +1,5 @@
 name 'adaptavist-template_file'
-version '0.0.1'
+version '0.0.2'
 source 'https://github.com/Adaptavist/puppet-template_file.git'
 author 'adaptavist'
 summary 'Template File Module' 
